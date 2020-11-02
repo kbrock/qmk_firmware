@@ -1,42 +1,33 @@
+/* Copyright 2019 gtips
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 #pragma once
 
 // place overrides here
 
-// when in doubt, send both keys
-#define IGNORE_MOD_TAP_INTERRUPT
-// upper right is esc, command-`, shift-~, but ~ when shift or command. command alt is esc
-#define GRAVE_ESC_ALT_OVERRIDE
-#undef PERMISSIVE_HOLD
-//#define TAPPING_FORCE_HOLD
-//#define RETRO_TAPPING
-
-// #define IGNORE_MOD_TAP_INTERRUPT_PER_KEY
-// bool get_ignore_mod_tap_interrupt(uint16_t keycode) {
-//   switch (keycode) {
-//     case LSFT_T(KC_GRV):
-//       return false;
-//     case RSFT_T(KC_RBRC):
-//       return false;
-//     case CTRL_T(KC_TAB):
-//       return false;
-//     case LT(3, KC_BSPC)
-//       return false;
-//     default: //,  LGUI_T(KC_SPC):
-//       return true;
-//   }
-// }
-
 #define RGB_DI_PIN D3
 #ifdef RGB_DI_PIN
-  #define RGBLED_NUM 1
+  #define RGBLED_NUM 11
   #define RGBLIGHT_HUE_STEP 16
   #define RGBLIGHT_SAT_STEP 16
   #define RGBLIGHT_VAL_STEP 16
   #define RGBLIGHT_LIMIT_VAL 255 /* The maximum brightness level */
   #define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
 // /*== all animations enable ==*/
-//  #define RGBLIGHT_ANIMATIONS
-// kb: NOTE disabled all animations
+  #define RGBLIGHT_ANIMATIONS
 // /*== or choose animations ==*/
 //   #define RGBLIGHT_EFFECT_BREATHING
 //   #define RGBLIGHT_EFFECT_RAINBOW_MOOD
